@@ -1,11 +1,11 @@
 let sum = [0, 1];
 console.log("fibonacci without recursion")
 
-function fibonacci(guantity) {
-    for (let i = 0; i < guantity; i++) {        
+function fibonacci(quantity) {
+    for (let i = 0; i < quantity; i++) {        
         let next = sum[sum.length - 1] + sum[sum.length - 2];
         sum.push(next);  
-        if (sum.length > guantity) {
+        if (sum.length > quantity) {
             sum.pop();
         }
     }
@@ -19,12 +19,12 @@ fibonacci("7", 7);
 
 console.log("Recursion")
 
-function fibonacciRecursion(guantity, m = 2, n = 3, sumrec = []) {
-    if (guantity <= 0) {
+function fibonacciRecursion(quantity, m = 2, n = 3, sumrec = []) {
+    if (quantity <= 0) {
         return sumrec;
     }
     sumrec.push(m);    
-    return fibonacciRecursion(guantity - 1, n, m + n, sumrec);
+    return fibonacciRecursion(quantity - 1, n, m + n, sumrec);
 }
 
 const a = fibonacciRecursion(3);
